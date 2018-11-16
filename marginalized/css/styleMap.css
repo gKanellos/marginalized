@@ -1,0 +1,79 @@
+.allContent {
+	background-color: rgba(39,41,46, .85);
+
+	padding: 10px;
+	text-align: center;
+}
+.bodyContent {
+font-family: 'Oswald', sans-serif;
+color: #FFFFFF;
+font-size: 1em;
+font-family: 'Open Sans Condensed', sans-serif;
+}
+h1 {
+color: #FFFFFF;
+font-family: 'Oswald', sans-serif;
+font-size: 1.2em;
+border-bottom: solid;
+border-width: 1px;
+border-color: #DB5E0B;
+
+}
+a:link{
+text-decoration: none; 
+color: #DB5E0B;
+}
+a:visited{
+	text-decoration: none; 
+	color: #DB5E0B;
+}
+#content2{
+	background: url(../images/icantbreathe.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#content1{
+background: url(../images/walterscott.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+#content3 {
+
+	background: url(../images/sweden.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#content4 {
+background: url(../images/germany.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+#content5 {
+background: url(../images/russia.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+#content6 {
+background: url(../images/brazil.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}

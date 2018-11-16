@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gabrielle Kanellos IML 400 Final</title>
+    <link rel="stylesheet" type="text/css" href="css/styleMap.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <style>
+      html, body, #map-canvas, #pano{
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR4p5o3x60zrrblHgew8uqeYxEC_51FeM"></script>
+    <script>
+    var map;
+var center = new google.maps.LatLng(34.755169, -7.949836);
+
+function initialize() {
+
+  var myStyle = [
+    {
+        "featureType": "all",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": "-92"
+            },
+            {
+                "gamma": "0.37"
+            },
+            {
+                "hue": "#CCCCCC"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#2f2f2f"
+               
+
+
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#1c1c1c"
+
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    
+   
+    {
+        "featureType": "administrative",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#27292E"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    }
+];
+
+  var mapOptions = {
+    zoom: 2,
+    center: center,
+    mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.WORLDMAP, 'worldStyle']
+    }
+  };
+
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+  var image = 'images/marker.png';
+    
+
+  var marker1 = new google.maps.Marker({
+    position: new google.maps.LatLng(32.899345, -80.013845),
+    map:map,
+    icon: image
+  }
+    );
+  
+var marker2 = new google.maps.Marker({
+    position: new google.maps.LatLng(40.637098, -74.076553),
+    map:map,
+    icon: image
+  }
+    );
+
+var marker3 = new google.maps.Marker({
+    position: new google.maps.LatLng(55.841732, 13.303553),
+    map:map,
+    icon: image
+  }
+    );
+var marker4 = new google.maps.Marker({
+    position: new google.maps.LatLng(51.044899, 13.727267),
+    map:map,
+    icon: image
+  }
+    );
+var marker5 = new google.maps.Marker({
+    position: new google.maps.LatLng(55.707078, 37.649230),
+    map:map,
+    icon: image
+  }
+    );
+var marker6 = new google.maps.Marker({
+    position: new google.maps.LatLng(-22.740522, -43.426684),
+    map:map,
+    icon: image
+  }
+    );
+var marker7 = new google.maps.Marker({
+    position: new google.maps.LatLng(-27.070645, 122.196601),
+    map:map,
+    icon: image
+  }
+    );
+
+var contentString1 = '<div id="content1">'+
+       '<div class="allContent">'+
+      '<h1> North Charleston, South Carolina </h1>'+
+      '<div class="bodyContent">'+
+      'On April 4, 2015 in North Charleston, South Carolina an unarmed black' +
+      ' man, Walter Scott, was shot and killed by police officer Michael Thomas'+
+      ' Slager after a traffic stop. While walking by, Feidin Santana caught '+
+      'the incident on video. The video shows Mr.Scott running away from the officer '+
+      'and is then is then shot at eight times. The video also shows that there was'+
+      ' no rush to perform CPR or deliver first aid to Mr.Scott. Officer Slager'+
+      ' was charged with murder 3 days later. '+
+      'For more information and relevant articles on the event, click <a href="http://query.nytimes.com/search/sitesearch/?action=click&contentCollection&region=TopBar&WT.nav=searchWidget&module=SearchSubmit&pgtype=Homepage#/walter+scott+murder/" target="_blank">here.</a>'+
+     '</div>'+
+      '</div>'+
+      '</div>';
+
+ var contentString2 = '<div id="content2">'+
+       '<div class="allContent">'+
+      '<h1> Staten Island, New York </h1>'+
+      '<div class="bodyContent">'+ 
+      //'<img src="../images/icantbreathe.jpg" style="width: 20px; height:20px">'+
+      'On July 17th in Staten Island, New York, Eric Garner was approached by police ' +
+      'officer Daniel Pantaleo for illegally selling cigarettes. After arguing with the '+
+      'Pantaleo, the officer attempted to handcuff Garner from which he pulled free. '+
+      'The officer threw his arms around Garner’s neck in a chokehold. As other officers '+
+      'swarmed around him, Garner was heard to be saying “I can’t breathe.” This chokehold'+
+      ' ultimately led to Garner’s death a short time after. A grand jury decided not to '+
+      'indict Pantaleo for his actions.'+
+      ' For more information and relevant articles on the event, click <a href="http://query.nytimes.com/search/sitesearch/?action=click&contentCollection&region=TopBar&WT.nav=searchWidget&module=SearchSubmit&pgtype=Homepage#/eric+garner/" target="_blank">here.</a>'+
+      '</div>'+
+      '</div>'+
+      '</div>';
+
+     var contentString3 = '<div id="content3">'+
+       '<div class="allContent">'+
+      '<h1> Sweden</h1>'+
+      '<div class="bodyContent">'+
+      'Between Christmas Day 2014 and New Year’s Day 2015, three mosques were attacked in Sweden.' +
+      ' The first mosque was attacked by arsonists the town of Eslöv in the early morning and set ablaze.'+
+      ' This was followed by a similar incident in Eskilstuna where five people were injured when a petrol bomb was tossed through a window during prayer.'+
+      ' The third attack happened in Uppsala where another petrol bomb was thrown into the mosque.'+
+      ' For more information on the event, click <a href="http://www.bbc.com/news/world-europe-30658482" target="_blank">here.</a>'+
+     '</div>'+
+      '</div>'+
+      '</div>'; 
+
+      var contentString4 = '<div id="content4">'+
+       '<div class="allContent">'+
+      '<h1>Dresden, Germany</h1>'+
+      '<div class="bodyContent">'+
+      'Since the beginning of October of 2014, anti-Islam protesters have taken the streets ' +
+      'of Dresden, Germany in the thousands. The banner name of these protesters is the '+
+      '“Patriotic Europeans Against the Islamization of the Occident”. On January 12, 2015, '+
+      'demonstrator numbers reached 25,000. The group used recent terrorist '+
+      'attacks in Paris to leverage more followers and justify their stance.'+
+      ' For more information on the event, see this <a href="https://news.vice.com/video/hate-in-europe-germanys-anti-islamic-protests" target="_blank">video.</a>'+
+     '</div>'+
+      '</div>'+
+      '</div>'; 
+
+      var contentString5 = '<div id="content5">'+
+       '<div class="allContent">'+
+      '<h1> Moscow, Russia </h1>'+
+      '<div class="bodyContent">'+
+      'Nearly three-quarters of Russians believe that homosexuality is morally unacceptable.' +
+      ' This was found by the Pew Research Center during the spring of 2013.'+
+      ' That same year, a popular gay club in Moscow called Central Station was subject to various attacks.'+
+      ' One incident involved two men opening fire outside the club. Another involved a form of harmful gas.'+
+      ' The club eventually closed its doors in 2014 after continuous harassment.'+
+      ' For more information and relevant information, click <a href="http://www.hrw.org/news/2014/12/15/russia-impunity-anti-lgbt-violence" target="_blank">here.</a>'+
+      '</div>'+
+      '</div>'+
+      '</div>';
+ var contentString6 = '<div id="content6">'+
+       '<div class="allContent">'+
+      '<h1> Palmeirinha, Brazil </h1>'+
+      '<div class="bodyContent">'+
+      'In the month of February 2015, three black teenagers were outside their house in Palmeirinha, Rio de Janeiro.' +
+      ' When one started running and the others followed, the police came out shooting at them.'+
+      ' Chauan Jambre Cezário, 19 years old, was seriously wounded while companion Alan de Souza Lima, 15 years old, died on the site.'+
+      ' According to police reports, they were shot after a confrontation with the police and allegedly had two guns at the scene.'+
+      ' However, a cell phone video shows that the teenagers didn’t have any guns nor was there a confrontation with resistance. '+
+      ' For more information and relevant information, click <a href="http://www.nytimes.com/2015/03/24/opinion/vanessa-barbara-in-denial-over-racism-in-brazil.html" target="_blank">here.</a>'+
+      '</div>'+
+      '</div>'+
+      '</div>';
+
+ var contentString7 = '<div id="content7">'+
+       '<div class="allContent">'+
+      '<h1>Australia </h1>'+
+      '<div class="bodyContent">'+
+      'In Western Australia, Indigenous people are being driven from their communities and homes. '+
+      ' Mining companies make billions off the profit of Aboriginal land and state governments say they can no longer support their homelands. '+
+      ' As an incredibly vulnerable population, Aboriginal leaders have warned of “a new generation of displaced people” and “cultural '+
+      ' genocide.” Since taking office, Tony Abbott, has cut $534 million federal funds for Indigenous social programs. '+
+      'In addition, studies have found that half of Australians are racist towards Aborigines with 1 in 10 admitting that they would tell racist jokes about Indigenous Australians. '+
+      'Organization Beyondblue found that four out of five Aborigines regularly experiences racism, which can lead to high levels of psychological distress.'+
+      ' For more information visit <a href="http://www.dailymail.co.uk/news/article-2709148/Half-Australians-racist-Aborigines-one-five-away-public-transport.html" target="_blank">these</a>'+
+      '<a href="http://www.theguardian.com/commentisfree/2015/apr/22/by-evicting-the-homelands-australia-has-again-declared-war-on-indigenous-people" target="_blank"> articles.</a>'+
+      '</div>'+
+      '</div>'+
+      '</div>';
+
+    var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1,
+      maxWidth:300,
+
+  });
+
+      google.maps.event.addListener(marker1, 'click', function() {
+    infowindow1.open(map,marker1);
+  });
+
+
+var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2,
+      maxWidth:300,     
+
+  });
+
+      google.maps.event.addListener(marker2, 'click', function() {
+    infowindow2.open(map,marker2);
+  });
+
+    var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3,
+      maxWidth:300,
+
+  });
+
+      google.maps.event.addListener(marker3, 'click', function() {
+    infowindow3.open(map,marker3);
+  });  
+      var infowindow4 = new google.maps.InfoWindow({
+      content: contentString4,
+      maxWidth:300,
+
+  });
+
+      google.maps.event.addListener(marker4, 'click', function() {
+    infowindow4.open(map,marker4);
+  });
+
+      var infowindow5 = new google.maps.InfoWindow({
+      content: contentString5,
+      maxWidth:300,
+
+  });
+      google.maps.event.addListener(marker5, 'click', function() {
+    infowindow5.open(map,marker5);
+  }); 
+
+ var infowindow6 = new google.maps.InfoWindow({
+      content: contentString6,
+      maxWidth:300,
+
+
+  });
+      google.maps.event.addListener(marker6, 'click', function() {
+    infowindow6.open(map,marker6);
+  }); 
+    var infowindow7 = new google.maps.InfoWindow({
+      content: contentString7,
+      maxWidth:300,
+
+  });
+
+      google.maps.event.addListener(marker7, 'click', function() {
+    infowindow7.open(map,marker7);
+  });
+
+
+  var styledMapOptions = {
+    name: 'World Style'
+  };
+
+  var myWorldStyle = new google.maps.StyledMapType(
+      myStyle, styledMapOptions);
+
+  map.mapTypes.set('worldStyle', myWorldStyle);
+  map.setMapTypeId('worldStyle');
+}
+
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    
+    <div id="map-canvas"></div>
+    
+  </body>
+</html>
